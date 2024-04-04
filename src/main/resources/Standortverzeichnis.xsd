@@ -1,0 +1,292 @@
+<!--
+********************************************************************************
+**   Version: 1.1
+**   Historie:
+**       2017-04-30  SS  Überarbeitet.
+**       2017-12-06  HG  Initiale Erstellung.
+**       2018-06-21  HG  Anpassungen gemäß Rückmeldung der SVP.
+**       2018-10-25  HG  StandortID ohne eigene Historie.
+**       2019-02-25  SS  Anpassungen Liste
+**       2019-03-20  SS  Kleine Überarbeitungen.
+**       2019-06-24  SS  Anpassung Georeferenz, Trägerart, Standorte 
+********************************************************************************
+ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.inek.org/schema/Standortverzeichnis" targetNamespace="http://xml.inek.org/schema/Standortverzeichnis" elementFormDefault="qualified">
+<xs:element name="Standortverzeichnis">
+<xs:complexType>
+<xs:sequence>
+<xs:element name="Dateikopf" type="DateikopfTyp"/>
+<xs:element name="Krankenhaus" type="KrankenhausTyp" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="Standort" type="StandortTyp" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+<xs:complexType name="DateikopfTyp">
+<xs:sequence>
+<xs:element name="Dateinummer" type="DateinummerTyp"/>
+<xs:element name="XmlSchemaVersion" type="SchemaVersionTyp" fixed="1.0.0"/>
+<xs:element name="LetzteÄnderung" type="DatumTyp"/>
+<xs:element name="Erstelldatum" type="DatumTyp"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="KrankenhausTyp">
+<xs:sequence>
+<xs:element name="Version" type="VersionsNummerTyp"/>
+<xs:element name="GültigVon" type="DatumTyp"/>
+<xs:element name="GültigBis" type="DatumTyp" minOccurs="0"/>
+<xs:element name="LetzteÄnderung" type="DatumTyp"/>
+<xs:element name="HauptIK" type="IKTyp" maxOccurs="unbounded"/>
+<xs:element name="Bezeichnung" type="Text255Typ"/>
+<xs:element name="Ermächtigungsgrundlage" type="ErmächtigungsgrundlageTyp"/>
+<xs:element name="Träger" type="Text255Typ"/>
+<xs:element name="Trägerart" type="TrägerartTyp"/>
+<xs:element name="Rechtsform" type="RechtsformTyp" minOccurs="0"/>
+<xs:element name="SitzGesellschaft" type="Text255Typ"/>
+<xs:element name="Registriergericht" type="Text255Typ" minOccurs="0"/>
+<xs:element name="Registriernummer" type="Text255Typ" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="StandortTyp">
+<xs:sequence>
+<xs:element name="Version" type="VersionsNummerTyp"/>
+<xs:element name="GültigVon" type="DatumTyp"/>
+<xs:element name="GültigBis" type="DatumTyp" minOccurs="0"/>
+<xs:element name="LetzteÄnderung" type="DatumTyp"/>
+<xs:element name="ReferenzKrankenhaus" type="KrankenhausReferenzTyp"/>
+<xs:element name="StandortId" type="StandortIdTyp"/>
+<xs:element name="Bezeichnung" type="Text255Typ"/>
+<xs:element name="GeoAdresse" type="GeoAdresseTyp"/>
+<xs:element name="Gemeindeschlüssel" type="GemeindeschlüsselTyp"/>
+<xs:element name="KVBezirk" type="KVBezirkTyp"/>
+<xs:element name="Bundesland" type="BundeslandTyp"/>
+<xs:element name="Adresstyp" type="AdresstypTyp"/>
+<xs:element name="PostAdresse" type="PostAdresseTyp"/>
+<xs:element name="Einrichtung" type="EinrichtungsTyp" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="EinrichtungsTyp">
+<xs:sequence>
+<xs:element name="Einrichtungstyp" type="EinrichtungstypTyp"/>
+<xs:element name="Standortnummer" type="StandortnummerTyp"/>
+<xs:element name="GültigVon" type="DatumTyp"/>
+<xs:element name="GültigBis" type="DatumTyp" minOccurs="0"/>
+<xs:element name="Name" type="Text255Typ"/>
+<xs:element name="GeoAdresse" type="GeoAdresseTyp" minOccurs="0"/>
+<xs:element name="AbrechnungsIK" type="IKTyp" maxOccurs="unbounded"/>
+<xs:element name="Betriebsstättennummer" type="BetriebsstättennummerTyp" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="GeoAdresseTyp">
+<xs:sequence>
+<xs:element name="GeoreferenzZone" type="GeoreferenzZonenTyp"/>
+<xs:element name="GeoreferenzOst" type="GeoreferenzOstTyp"/>
+<xs:element name="GeoreferenzNord" type="GeoreferenzNordTyp"/>
+<xs:element name="Längengrad" type="LängenBreitenGradTyp"/>
+<xs:element name="Breitengrad" type="LängenBreitenGradTyp"/>
+<xs:element name="PLZ" type="PlzTyp"/>
+<xs:element name="Ort" type="Text255Typ"/>
+<xs:element name="Straße" type="Text255Typ"/>
+<xs:element name="Hausnummer" type="Text20Typ"/>
+<xs:element name="AdressZusatz" type="Text50Typ" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="PostAdresseTyp">
+<xs:sequence>
+<xs:element name="PLZ" type="PlzTyp"/>
+<xs:element name="Ort" type="Text255Typ"/>
+<xs:element name="StraßePostfach" type="Text255Typ" minOccurs="0"/>
+<xs:element name="Hausnummer" type="Text20Typ" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="IKTyp">
+<xs:sequence>
+<xs:element name="IK" type="IKNummerTyp"/>
+<xs:element name="GültigVon" type="DatumTyp"/>
+<xs:element name="GültigBis" type="DatumTyp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:complexType name="BetriebsstättennummerTyp">
+<xs:sequence>
+<xs:element name="BSNR" type="BSNRTyp"/>
+<xs:element name="GültigVon" type="DatumTyp"/>
+<xs:element name="GültigBis" type="DatumTyp" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="DateinummerTyp">
+<xs:restriction base="xs:string">
+<xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+<xs:length value="4"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="SchemaVersionTyp">
+<xs:restriction base="xs:string">
+<xs:pattern value="[0-9][0-9]?\.[0-9][0-9]?\.[0-9][0-9]?"/>
+<xs:minLength value="5"/>
+<xs:maxLength value="8"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="DatumTyp">
+<xs:restriction base="xs:date">
+<xs:minInclusive value="1900-01-01"/>
+<xs:maxInclusive value="2999-12-31"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="VersionsNummerTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:pattern value="[0-9][0-9][0-9]"/>
+<xs:maxInclusive value="999"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="IKNummerTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="BSNRTyp">
+<xs:restriction base="xs:string">
+<xs:pattern value="(([0-689][0-9])|([0-9][0-689]))[0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+<xs:length value="9"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:complexType name="KrankenhausReferenzTyp">
+<xs:sequence>
+<xs:element name="IK" type="IKNummerTyp"/>
+<xs:element name="Version" type="VersionsNummerTyp"/>
+</xs:sequence>
+</xs:complexType>
+<xs:simpleType name="StandortIdTyp">
+<xs:restriction base="xs:positiveInteger">
+<xs:pattern value="77[0-9][0-9][0-9][0-9]"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="GeoreferenzZonenTyp">
+<xs:restriction base="xs:string">
+<xs:pattern value="3[123][TU]?"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="GeoreferenzOstTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:maxInclusive value="999999"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="GeoreferenzNordTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:maxInclusive value="9999999"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="LängenBreitenGradTyp">
+<xs:restriction base="xs:decimal">
+<xs:minInclusive value="0"/>
+<xs:fractionDigits value="12"/>
+<xs:totalDigits value="14"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="PlzTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:minInclusive value="1000"/>
+<xs:pattern value="[0-9][0-9][0-9][0-9][0-9]"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="GemeindeschlüsselTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:pattern value="[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="StandortnummerTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:pattern value="77[0-9][0-9][0-9][0-9]0[0-9][0-9]"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="RechtsformTyp">
+<!--  Keine Aufzählung, da mit Erweiterungen der Werteliste zu rechnen ist  -->
+<xs:restriction base="Text255Typ"/>
+</xs:simpleType>
+<xs:simpleType name="EinrichtungstypTyp">
+<!--  Keine Aufzählung, da mit Erweiterungen der Werteliste zu rechnen ist  -->
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:pattern value="[0-9][0-9]"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="ErmächtigungsgrundlageTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:enumeration value="1"/>
+<xs:enumeration value="2"/>
+<xs:enumeration value="3"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="BundeslandTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:enumeration value="1"/>
+<xs:enumeration value="2"/>
+<xs:enumeration value="3"/>
+<xs:enumeration value="4"/>
+<xs:enumeration value="5"/>
+<xs:enumeration value="6"/>
+<xs:enumeration value="7"/>
+<xs:enumeration value="8"/>
+<xs:enumeration value="9"/>
+<xs:enumeration value="10"/>
+<xs:enumeration value="11"/>
+<xs:enumeration value="12"/>
+<xs:enumeration value="13"/>
+<xs:enumeration value="14"/>
+<xs:enumeration value="15"/>
+<xs:enumeration value="16"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="KVBezirkTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:enumeration value="1"/>
+<xs:enumeration value="2"/>
+<xs:enumeration value="3"/>
+<xs:enumeration value="17"/>
+<xs:enumeration value="20"/>
+<xs:enumeration value="38"/>
+<xs:enumeration value="46"/>
+<xs:enumeration value="51"/>
+<xs:enumeration value="52"/>
+<xs:enumeration value="71"/>
+<xs:enumeration value="72"/>
+<xs:enumeration value="73"/>
+<xs:enumeration value="78"/>
+<xs:enumeration value="83"/>
+<xs:enumeration value="88"/>
+<xs:enumeration value="93"/>
+<xs:enumeration value="98"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="TrägerartTyp">
+<xs:restriction base="xs:string">
+<xs:enumeration value="f"/>
+<xs:enumeration value="ö"/>
+<xs:enumeration value="p"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="AdresstypTyp">
+<xs:restriction base="xs:nonNegativeInteger">
+<xs:enumeration value="1"/>
+<xs:enumeration value="2"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Text255Typ">
+<xs:restriction base="xs:string">
+<xs:whiteSpace value="collapse"/>
+<xs:minLength value="0"/>
+<xs:maxLength value="255"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Text50Typ">
+<xs:restriction base="xs:string">
+<xs:whiteSpace value="collapse"/>
+<xs:minLength value="1"/>
+<xs:maxLength value="50"/>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Text20Typ">
+<xs:restriction base="xs:string">
+<xs:whiteSpace value="collapse"/>
+<xs:minLength value="1"/>
+<xs:maxLength value="20"/>
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

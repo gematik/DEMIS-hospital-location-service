@@ -1,1 +1,0 @@
-# DEMIS-hospital-location-service
