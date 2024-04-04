@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<Standortverzeichnis xmlns="http://xml.inek.org/schema/Standortverzeichnis" xsi:schemaLocation="http://xml.inek.org/schema/Standortverzeichnis" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <Standort>
+        <Version>001</Version>
+        <GültigVon>2022-09-01</GültigVon>
+
+        <LetzteÄnderung>2022-09-01</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>987654321</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>987654</StandortId>
+        <Bezeichnung>Testkrankenhaus - gematik GmbH</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>33U</GeoreferenzZone>
+            <GeoreferenzOst>390601</GeoreferenzOst>
+            <GeoreferenzNord>5820382</GeoreferenzNord>
+            <Längengrad>13.387544</Längengrad>
+            <Breitengrad>52.522550</Breitengrad>
+
+            <PLZ>10117</PLZ>
+            <Ort>Berlin</Ort>
+            <Straße>Friedrichstraße</Straße>
+            <Hausnummer>136</Hausnummer>
+
+        </GeoAdresse>
+        <Gemeindeschlüssel>11000001</Gemeindeschlüssel>
+        <KVBezirk>72</KVBezirk>
+        <Bundesland>11</Bundesland>
+        <Adresstyp>2</Adresstyp>
+        <PostAdresse>
+            <PLZ>10117</PLZ>
+            <Ort>Berlin</Ort>
+            <StraßePostfach>Friedrichstraße</StraßePostfach>
+            <Hausnummer>136</Hausnummer>
+        </PostAdresse>
+
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>987654321</Standortnummer>
+            <GültigVon>2022-09-01</GültigVon>
+
+            <Name>Hauptstandort - Stationäre Behandlung</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>33U</GeoreferenzZone>
+                <GeoreferenzOst>390601</GeoreferenzOst>
+                <GeoreferenzNord>5820382</GeoreferenzNord>
+                <Längengrad>13.387544</Längengrad>
+                <Breitengrad>52.522550</Breitengrad>
+                <PLZ>10117</PLZ>
+                <Ort>Berlin</Ort>
+                <Straße>Friedrichstraße</Straße>
+                <Hausnummer>136</Hausnummer>
+
+            </GeoAdresse>
+
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2022-09-01</GültigVon>
+
+            </AbrechnungsIK>
+
+            <Betriebsstättennummer>
+                <BSNR>987654321</BSNR>
+                <GültigVon>2022-09-01</GültigVon>
+
+            </Betriebsstättennummer>
+
+        </Einrichtung>
+
+    </Standort>
+
+    <Standort>
+        <Version>001</Version>
+        <GültigVon>2022-09-08</GültigVon>
+
+        <LetzteÄnderung>2022-09-08</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>987654321</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>654321</StandortId>
+        <Bezeichnung>Test-standort-1 - gematik GmbH</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>33U</GeoreferenzZone>
+            <GeoreferenzOst>389658</GeoreferenzOst>
+            <GeoreferenzNord>5820136</GeoreferenzNord>
+            <Längengrad>13.373735</Längengrad>
+            <Breitengrad>52.520156</Breitengrad>
+
+            <PLZ>10557</PLZ>
+            <Ort>Berlin</Ort>
+            <Straße>Konrad-Adenauer-Straße</Straße>
+            <Hausnummer>1</Hausnummer>
+
+        </GeoAdresse>
+        <Gemeindeschlüssel>11000001</Gemeindeschlüssel>
+        <KVBezirk>72</KVBezirk>
+        <Bundesland>11</Bundesland>
+        <Adresstyp>2</Adresstyp>
+        <PostAdresse>
+            <PLZ>10557</PLZ>
+            <Ort>Berlin</Ort>
+            <StraßePostfach>Konrad-Adenauer-Straße</StraßePostfach>
+            <Hausnummer>1</Hausnummer>
+        </PostAdresse>
+
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>987654321</Standortnummer>
+            <GültigVon>2022-09-01</GültigVon>
+
+            <Name>Teststandort für Einrichtung 1</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>33U</GeoreferenzZone>
+                <GeoreferenzOst>389658</GeoreferenzOst>
+                <GeoreferenzNord>5820136</GeoreferenzNord>
+                <Längengrad>13.373735</Längengrad>
+                <Breitengrad>52.520156</Breitengrad>
+                <PLZ>10557</PLZ>
+                <Ort>Berlin</Ort>
+                <Straße>Konrad-Adenauer-Straße</Straße>
+                <Hausnummer>1</Hausnummer>
+
+            </GeoAdresse>
+
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </AbrechnungsIK>
+
+            <Betriebsstättennummer>
+                <BSNR>987654322</BSNR>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </Betriebsstättennummer>
+
+        </Einrichtung>
+
+    </Standort>
+
+    <Standort>
+        <Version>001</Version>
+        <GültigVon>2022-09-08</GültigVon>
+
+        <LetzteÄnderung>2022-09-08</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>987654321</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>765432</StandortId>
+        <Bezeichnung>Test-standort-2 (RKI) - gematik GmbH</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>33U</GeoreferenzZone>
+            <GeoreferenzOst>387882</GeoreferenzOst>
+            <GeoreferenzNord>5822337</GeoreferenzNord>
+            <Längengrad>13.346826</Längengrad>
+            <Breitengrad>52.539572</Breitengrad>
+
+            <PLZ>13353</PLZ>
+            <Ort>Berlin</Ort>
+            <Straße>Nordufer</Straße>
+            <Hausnummer>20</Hausnummer>
+
+        </GeoAdresse>
+        <Gemeindeschlüssel>11000001</Gemeindeschlüssel>
+        <KVBezirk>72</KVBezirk>
+        <Bundesland>11</Bundesland>
+        <Adresstyp>2</Adresstyp>
+        <PostAdresse>
+            <PLZ>13353</PLZ>
+            <Ort>Berlin</Ort>
+            <StraßePostfach>Nordufer</StraßePostfach>
+            <Hausnummer>20</Hausnummer>
+        </PostAdresse>
+
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>987654321</Standortnummer>
+            <GültigVon>2022-09-01</GültigVon>
+
+            <Name>Teststandort für Einrichtung 2</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>33U</GeoreferenzZone>
+                <GeoreferenzOst>387882</GeoreferenzOst>
+                <GeoreferenzNord>5822337</GeoreferenzNord>
+                <Längengrad>13.346826</Längengrad>
+                <Breitengrad>52.539572</Breitengrad>
+                <PLZ>13353</PLZ>
+                <Ort>Berlin</Ort>
+                <Straße>Nordufer</Straße>
+                <Hausnummer>20</Hausnummer>
+
+            </GeoAdresse>
+
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </AbrechnungsIK>
+
+            <Betriebsstättennummer>
+                <BSNR>987654323</BSNR>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </Betriebsstättennummer>
+
+        </Einrichtung>
+
+    </Standort>
+
+
+    <Standort>
+        <Version>001</Version>
+        <GültigVon>2022-09-08</GültigVon>
+
+        <LetzteÄnderung>2022-09-08</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>987654321</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>876543</StandortId>
+        <Bezeichnung>Test-standort-2 (BMG) - gematik GmbH</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>33U</GeoreferenzZone>
+            <GeoreferenzOst>390647</GeoreferenzOst>
+            <GeoreferenzNord>5820621</GeoreferenzNord>
+            <Längengrad>13.388148</Längengrad>
+            <Breitengrad>52.524711</Breitengrad>
+
+            <PLZ>10117</PLZ>
+            <Ort>Berlin</Ort>
+            <Straße>Friedrichstraße</Straße>
+            <Hausnummer>108</Hausnummer>
+
+        </GeoAdresse>
+        <Gemeindeschlüssel>11000001</Gemeindeschlüssel>
+        <KVBezirk>72</KVBezirk>
+        <Bundesland>11</Bundesland>
+        <Adresstyp>2</Adresstyp>
+        <PostAdresse>
+            <PLZ>10117</PLZ>
+            <Ort>Berlin</Ort>
+            <StraßePostfach>Friedrichstraße</StraßePostfach>
+            <Hausnummer>108</Hausnummer>
+        </PostAdresse>
+
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>987654321</Standortnummer>
+            <GültigVon>2022-09-01</GültigVon>
+
+            <Name>Hauptstandort - Stationäre Behandlung</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>33U</GeoreferenzZone>
+                <GeoreferenzOst>390647</GeoreferenzOst>
+                <GeoreferenzNord>5820621</GeoreferenzNord>
+                <Längengrad>13.388148</Längengrad>
+                <Breitengrad>52.524711</Breitengrad>
+                <PLZ>10117</PLZ>
+                <Ort>Berlin</Ort>
+                <Straße>Friedrichstraße</Straße>
+                <Hausnummer>108</Hausnummer>
+
+            </GeoAdresse>
+
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </AbrechnungsIK>
+
+            <Betriebsstättennummer>
+                <BSNR>987654323</BSNR>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </Betriebsstättennummer>
+
+        </Einrichtung>
+
+    </Standort>
+
+    <Standort>
+        <Version>001</Version>
+        <GültigVon>2022-09-08</GültigVon>
+
+        <LetzteÄnderung>2022-09-08</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>987654321</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>876544</StandortId>
+        <Bezeichnung>Test-Standort-3 (Sachsen) - gematik GmbH</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>33U</GeoreferenzZone>
+            <GeoreferenzOst>411697</GeoreferenzOst>
+            <GeoreferenzNord>5656333</GeoreferenzNord>
+            <Längengrad>13.740161</Längengrad>
+            <Breitengrad>51.051737</Breitengrad>
+
+            <PLZ>01067</PLZ>
+            <Ort>Dresden</Ort>
+            <Straße>Neumarkt</Straße>
+            <Hausnummer>1</Hausnummer>
+
+        </GeoAdresse>
+        <Gemeindeschlüssel>14612000</Gemeindeschlüssel>
+        <KVBezirk>98</KVBezirk>
+        <Bundesland>14</Bundesland>
+        <Adresstyp>2</Adresstyp>
+        <PostAdresse>
+            <PLZ>01067</PLZ>
+            <Ort>Dresden</Ort>
+            <StraßePostfach>Neumarkt</StraßePostfach>
+            <Hausnummer>1</Hausnummer>
+        </PostAdresse>
+
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>987654321</Standortnummer>
+            <GültigVon>2022-09-01</GültigVon>
+
+            <Name>Hauptstandort - Stationäre Behandlung</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>33U</GeoreferenzZone>
+                <GeoreferenzOst>411697</GeoreferenzOst>
+                <GeoreferenzNord>5656333</GeoreferenzNord>
+                <Längengrad>13.740161</Längengrad>
+                <Breitengrad>51.051737</Breitengrad>
+                <PLZ>01067</PLZ>
+                <Ort>Dresden</Ort>
+                <Straße>Neumarkt</Straße>
+                <Hausnummer>1</Hausnummer>
+
+            </GeoAdresse>
+
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </AbrechnungsIK>
+
+            <Betriebsstättennummer>
+                <BSNR>987654323</BSNR>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </Betriebsstättennummer>
+
+        </Einrichtung>
+
+    </Standort>
+
+    <Standort>
+        <Version>001</Version>
+        <GültigVon>2022-09-08</GültigVon>
+
+        <LetzteÄnderung>2022-09-08</LetzteÄnderung>
+        <ReferenzKrankenhaus>
+            <IK>987654321</IK>
+            <Version>001</Version>
+        </ReferenzKrankenhaus>
+        <StandortId>876545</StandortId>
+        <Bezeichnung>Test-Standort-4 (Sonderzeichen) "|&amp;@'\/`?+*[]{};.,§$€%^°= ;) :D ~ # -.- ^^ - ?! gematik GmbH</Bezeichnung>
+        <GeoAdresse>
+            <GeoreferenzZone>33U</GeoreferenzZone>
+            <GeoreferenzOst>411697</GeoreferenzOst>
+            <GeoreferenzNord>5656333</GeoreferenzNord>
+            <Längengrad>13.740161</Längengrad>
+            <Breitengrad>51.051737</Breitengrad>
+
+            <PLZ>01067</PLZ>
+            <Ort>Ort"|&amp;@'\/`?+*[]{};.,§$€%^°= ;) :D ~ # -.- ^^ - ?!</Ort>
+            <Straße>Straße"|&amp;@'\/`?+*[]{};.,§$€%^°= ;) :D ~ # -.- ^^ - ?!</Straße>
+            <Hausnummer>1</Hausnummer>
+
+        </GeoAdresse>
+        <Gemeindeschlüssel>14612000</Gemeindeschlüssel>
+        <KVBezirk>98</KVBezirk>
+        <Bundesland>14</Bundesland>
+        <Adresstyp>2</Adresstyp>
+        <PostAdresse>
+            <PLZ>01067</PLZ>
+            <Ort>Ort"|&amp;@'\/`+*[]{};.,§$€%^°= ;) :D ~ # -.- ^^ - ?!</Ort>
+            <StraßePostfach>Straße"|&amp;@'\/`+*[]{};.,§$€%^°= ;) :D ~ # -.- ^^ - ?!</StraßePostfach>
+            <Hausnummer>1</Hausnummer>
+        </PostAdresse>
+
+        <Einrichtung>
+            <Einrichtungstyp>00</Einrichtungstyp>
+            <Standortnummer>987654321</Standortnummer>
+            <GültigVon>2022-09-01</GültigVon>
+
+            <Name>Hauptstandort - Stationäre Behandlung</Name>
+            <GeoAdresse>
+                <GeoreferenzZone>33U</GeoreferenzZone>
+                <GeoreferenzOst>411697</GeoreferenzOst>
+                <GeoreferenzNord>5656333</GeoreferenzNord>
+                <Längengrad>13.740161</Längengrad>
+                <Breitengrad>51.051737</Breitengrad>
+                <PLZ>01067</PLZ>
+                <Ort>Ort"|&amp;@'\/`+*[]{};.,§$€%^°= ;) :D ~ # -.- ^^ - ?!</Ort>
+                <Straße>Straße"|&amp;@'\/`+*[]{};.,§$€%^°= ;) :D ~ # -.- ^^ - ?!</Straße>
+                <Hausnummer>1</Hausnummer>
+
+            </GeoAdresse>
+
+            <AbrechnungsIK>
+                <IK>987654321</IK>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </AbrechnungsIK>
+
+            <Betriebsstättennummer>
+                <BSNR>987654323</BSNR>
+                <GültigVon>2022-09-08</GültigVon>
+
+            </Betriebsstättennummer>
+
+        </Einrichtung>
+
+    </Standort>
+
+</Standortverzeichnis>
+        

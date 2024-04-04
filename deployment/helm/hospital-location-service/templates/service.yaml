@@ -1,0 +1,17 @@
+{{- if not .Values.istio.enable }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "hospital-location-service.fullname" . }}
+  labels:
+    {{- include "hospital-location-service.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.ports.http }}
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "hospital-location-service.selectorLabels" . | nindent 4 }}
+{{- end }}
