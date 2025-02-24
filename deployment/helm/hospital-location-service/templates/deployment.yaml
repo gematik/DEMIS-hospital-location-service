@@ -51,7 +51,7 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ $dockerRepository }}/{{ $dockerImage }}:{{ $dockerTag }}"
           {{- /* Pull always an image if is tagged as "latest" */}}
-          imagePullPolicy: {{- if eq .Values.required.image.tag "latest" }} "Always" {{else}} "IfNotPresent" {{- end -}}
+          imagePullPolicy: {{ .Values.imagePullPolicy }}
           {{- /* If entrypoint and parameters are both defined, configure them */ -}}
           {{- if .Values.application.entrypoint }}
           {{- if .Values.application.parameters }}
@@ -122,9 +122,11 @@ spec:
               port: hls-port
             failureThreshold: 5
             periodSeconds: 10
+          {{- with .Values.resources }}
           # Define Limits and Requested Resources (CPU/RAM)
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
