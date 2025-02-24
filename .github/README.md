@@ -60,14 +60,14 @@ mvn clean verify
 build image with
 
 ```docker 
-docker build -t europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev/hospital-location-service:latest .
+docker build -t hospital-location-service:latest .
 ```
 the image can alternatively also be built with maven:
 ```docker
 mvn clean install -Pdocker
 ```
 
-run image as container `docker run -p 8083:8083 -dt --name hls-container europe-west3-docker.pkg.dev/gematik-all-infra-prod/demis-dev/hospital-location-service:latest`
+run image as container `docker run -p 8083:8083 -dt --name hls-container hospital-location-service:latest`
 
 ### Local
 in IntelliJ as SpringBoot Application
@@ -123,5 +123,4 @@ See [LICENSE](../LICENSE.md).
 
 ## Contact
 
-E-Mail to [DEMIS Entwicklung](mailto:demis-entwicklung@gematik.de?subject=[GitHub]%20Validation-Service)
-
+E-Mail to [DEMIS Entwicklung](mailto:demis-entwicklung@gematik.de?subject=[GitHub]%20Hospital-Location-Service)

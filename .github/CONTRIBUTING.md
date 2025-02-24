@@ -8,7 +8,7 @@ In this guide you will get an overview how you can contribute to our projects by
 
 ## Reporting a security vulnerability
 
-Please do not report vulnerabilities and security incidents as GitHub issues. Please contact us by sending an E-Mail to [Open Source Program Office](mailto:ospo@gematik.de?subject=[GitHub]%20Validation-Service) or report them using the contact form at https://fachportal.gematik.de/kontaktformular.
+Please do not report vulnerabilities and security incidents as GitHub issues. Please contact us by sending an E-Mail to [Open Source Program Office](mailto:ospo@gematik.de?subject=[GitHub]%20Hospital-Location-Service) or report them using the contact form at https://fachportal.gematik.de/kontaktformular.
 
 ## New contributor guide
 
