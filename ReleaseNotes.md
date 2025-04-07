@@ -2,6 +2,10 @@
 
 # Release notes hospital-location-service
 
+## Release 1.2.0 (2025-02-26)
+
+- updated InEK List
+
 ## Release 1.1.11 (2025-02-24)
 
 - updated Spring-Parent to 2.5.3
