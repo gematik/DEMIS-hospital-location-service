@@ -2,9 +2,12 @@
 
 # Release notes hospital-location-service
 
-## Release 1.2.3
-- Updated dependencies
+
+## Release 1.3.0
 - Updated InEK List
+- Fix: InEK Update Jenkinsfile
+- Updated dependencies
+- add support for new API Endpoints
 
 ## Release 1.2.2
 - Updated ospo-resources for adding additional notes and disclaimer

@@ -42,7 +42,7 @@ public class HospitalLocationCtr {
 
   private final HospitalLocationSrv hospitalLocationSrv;
 
-  @GetMapping(path = "/hospital-locations", produces = APPLICATION_JSON_VALUE)
+  @GetMapping(path = "${hls.context-path}", produces = APPLICATION_JSON_VALUE)
   public ResponseEntity<List<HospitalLocationDTO>> findByIk(@RequestParam String ik) {
     return ResponseEntity.ok().body(hospitalLocationSrv.findByIk(ik));
   }
