@@ -7,7 +7,7 @@ All URIs are relative to *http://localhost*
 
 | Class | Method | HTTP request | Description |
 |------------ | ------------- | ------------- | -------------|
-| *HospitalLocationCtrApi* | [**findByIk**](Apis/HospitalLocationCtrApi.md#findbyik) | **GET** /hospital-locations |  |
+| *HospitalLocationCtrApi* | [**findByIk**](Apis/HospitalLocationCtrApi.md#findByIk) | **GET** /hospital-locations |  |
 
 
 <a name="documentation-for-models"></a>
