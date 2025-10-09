@@ -2,6 +2,9 @@
 
 # Release notes hospital-location-service
 
+## Release 1.3.1
+- Updated InEK List (2025/09/19)
+- Updated dependencies
 
 ## Release 1.3.0
 - Updated InEK List
