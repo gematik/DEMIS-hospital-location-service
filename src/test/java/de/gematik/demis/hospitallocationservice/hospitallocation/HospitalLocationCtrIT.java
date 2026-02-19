@@ -4,7 +4,7 @@ package de.gematik.demis.hospitallocationservice.hospitallocation;
  * #%L
  * hospital-location-service
  * %%
- * Copyright (C) 2025 gematik GmbH
+ * Copyright (C) 2025 - 2026 gematik GmbH
  * %%
  * Licensed under the EUPL, Version 1.2 or - as soon they will be approved by the
  * European Commission – subsequent versions of the EUPL (the "Licence").
@@ -22,7 +22,8 @@ package de.gematik.demis.hospitallocationservice.hospitallocation;
  *
  * *******
  *
- * For additional notes and disclaimer from gematik and in case of changes by gematik find details in the "Readme" file.
+ * For additional notes and disclaimer from gematik and in case of changes by gematik,
+ * find details in the "Readme" file.
  * #L%
  */
 
@@ -63,7 +64,7 @@ class HospitalLocationCtrIT implements BaseTest {
 
     HttpHeaders headers = new HttpHeaders();
     mockMvc
-        .perform(get("/hospital-locations").param("ik", "260200570").headers(headers))
+        .perform(get("/locations").param("ik", "260200570").headers(headers))
         .andExpect(status().isOk())
         .andExpect(
             header().string("Content-Type", containsString(MediaType.APPLICATION_JSON_VALUE)))
@@ -76,7 +77,7 @@ class HospitalLocationCtrIT implements BaseTest {
   void shouldReturnEmptyBodyForNoExistingIK() throws Exception {
     HttpHeaders headers = new HttpHeaders();
     mockMvc
-        .perform(get("/hospital-locations").param("ik", "111111111").headers(headers))
+        .perform(get("/locations").param("ik", "111111111").headers(headers))
         .andExpect(status().isOk())
         .andExpect(header().exists("Content-Type"))
         .andExpect(content().string(jsonMapper.writeValueAsString(emptyList())));

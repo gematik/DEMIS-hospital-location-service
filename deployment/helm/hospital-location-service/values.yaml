@@ -21,8 +21,7 @@ required:
     tag: null
 
 # Environment Variables to be defined
-customEnvVars:
-  FEATURE_FLAG_NEW_API_ENDPOINTS: false
+customEnvVars: {}
 
 # Extra Labels to be added
 # E.g.

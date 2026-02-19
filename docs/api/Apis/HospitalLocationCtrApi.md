@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**findByIk**](HospitalLocationCtrApi.md#findByIk) | **GET** /hospital-locations |  |
+| [**findByIk**](HospitalLocationCtrApi.md#findByIk) | **GET** /locations |  |
 
 
 <a name="findByIk"></a>
