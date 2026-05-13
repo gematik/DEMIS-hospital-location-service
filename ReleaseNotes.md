@@ -1,6 +1,11 @@
 <div style="text-align:right"><img src="https://raw.githubusercontent.com/gematik/gematik.github.io/master/Gematik_Logo_Flag_With_Background.png" width="250" height="47" alt="gematik GmbH Logo"/> <br/> </div> <br/>
 
 # Release notes hospital-location-service
+## Release 1.4.0 
+- updated base-image and updated from java 21 to java 25
+- removed istio helm chart
+- updated inEK list
+- updated docker base image to gematik1/osadl-alpine-openjdk25-jre:1.0.4
 
 ## Release 1.3.3
 - Updated dependencies

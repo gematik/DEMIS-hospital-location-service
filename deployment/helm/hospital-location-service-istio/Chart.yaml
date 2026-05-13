@@ -1,6 +1,0 @@
-apiVersion: v2
-name: hospital-location-service-istio
-description: DEMIS hospital-location-service Istio Configuration
-type: application
-version: 1.3.2
-appVersion: "1.3.2"
