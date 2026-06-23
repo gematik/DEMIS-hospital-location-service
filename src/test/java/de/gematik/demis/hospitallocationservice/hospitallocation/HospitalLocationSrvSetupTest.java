@@ -27,7 +27,6 @@ package de.gematik.demis.hospitallocationservice.hospitallocation;
  * #L%
  */
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.BeanInitializationException;
@@ -35,6 +34,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
+import tools.jackson.databind.ObjectMapper;
 
 @SpringBootTest
 class HospitalLocationSrvSetupTest {
