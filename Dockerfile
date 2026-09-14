@@ -1,10 +1,10 @@
 # Declare Source Digest for the Base Image
-ARG SOURCE_DIGEST=46cefc61289b58c2bf566c433f63481b479f98f99d8debbed7817b701ca48a82
-FROM gematik1/osadl-alpine-openjdk25-jre:1.0.4@sha256:$SOURCE_DIGEST
+ARG SOURCE_DIGEST=257288f1dc49eb6984140869d104c0ea9ef884854eb357474a7b9ced7d01ef9e
+FROM gematik1/osadl-alpine-openjdk25-jre:1.0.8@sha256:${SOURCE_DIGEST}
 
 # Redeclare Source Digest to be used in the build context
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
-ARG SOURCE_DIGEST=46cefc61289b58c2bf566c433f63481b479f98f99d8debbed7817b701ca48a82
+ARG SOURCE_DIGEST=257288f1dc49eb6984140869d104c0ea9ef884854eb357474a7b9ced7d01ef9e
 
 # The STOPSIGNAL instruction sets the system call signal that will be sent to the container to exit
 # SIGTERM = 15 - https://de.wikipedia.org/wiki/Signal_(Unix)
@@ -41,7 +41,7 @@ ARG VERSION
 LABEL de.gematik.vendor="gematik GmbH" \
       maintainer="software-development@gematik.de" \
       de.gematik.app="DEMIS Hospital-Location-Service" \
-      de.gematik.git-repo-name="https://gitlab.prod.ccs.gematik.solutions/git/demis/hospital-location-service.git" \
+      de.gematik.git-repo-name="https://gitlab.prod.ccs.gematik.solutions/demis/services/hospital-location-service.git" \
       de.gematik.commit-sha=$COMMIT_HASH \
       de.gematik.version=$VERSION \
       de.gematik.source.digest=$SOURCE_DIGEST

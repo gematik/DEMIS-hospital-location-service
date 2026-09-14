@@ -29,10 +29,6 @@ package de.gematik.demis.hospitallocationservice.hospitallocation;
 
 import static java.util.stream.Collectors.groupingBy;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import de.gematik.demis.hospitallocationservice.models.HospitalLocation;
 import de.gematik.demis.hospitallocationservice.models.HospitalLocationDTO;
 import io.micrometer.observation.annotation.Observed;
@@ -51,6 +47,10 @@ import org.springframework.beans.factory.BeanInitializationException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+import tools.jackson.core.type.TypeReference;
+import tools.jackson.databind.JsonNode;
+import tools.jackson.databind.ObjectMapper;
+import tools.jackson.dataformat.xml.XmlMapper;
 
 @Slf4j
 @Service
